@@ -369,7 +369,7 @@
                             <goals>
                                 <goal>set-spec-properties</goal>
                                 <!--
-                                    Disable the check as it currently because the
+                                    Disable the check as it currently breaks the build because the
                                     groupId does not start with javax.
                                  -->
                                  <!--
