@@ -345,6 +345,11 @@
                 </plugin>
                 <plugin>
                     <!-- This plugin generates the spec.* properties used in maven-bundle-plugin -->
+			
+	            <!--
+                        Commented out as this plug-in currently breaks the build due to
+                        a hard-coded requirement that the groupId starts with javax.
+                    -->
                     <groupId>org.glassfish.build</groupId>
                     <artifactId>spec-version-maven-plugin</artifactId>
                     <version>1.2</version>
@@ -363,7 +368,13 @@
                         <execution>
                             <goals>
                                 <goal>set-spec-properties</goal>
-                                <goal>check-module</goal>
+                                <!--
+                                    Disable the check as it currently because the
+                                    groupId does not start with javax.
+                                 -->
+                                 <!--
+                                     <goal>check-module</goal>
+                                 -->
                             </goals>
                         </execution>
                     </executions>
